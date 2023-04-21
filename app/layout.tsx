@@ -26,8 +26,6 @@ export default function RootLayout({
           <Toaster position='bottom-right' />
 
           {/*<MobileMenu /> */ }
-
-          <main>{children}</main>
         </Providers>
 
         {/* Allow more height for mobile menu on mobile */}

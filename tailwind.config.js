@@ -24,6 +24,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
       },
+      gridTemplateRows: {
+        '[auto,auto,1fr]': 'auto auto 1fr',
+      },
       colors: {
         ...colors,
         'light-gold': '#f5bc51',
@@ -31,5 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography'),require('@tailwindcss/aspect-ratio')],
 }
