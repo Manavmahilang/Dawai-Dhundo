@@ -1,0 +1,242 @@
+[{
+    
+    "id": 1,
+    "img": "hg"
+
+},
+{
+    
+    "id": 2,
+    "img":"hg"
+
+},
+{
+    
+    "id": 3,
+    "img":"hg"
+
+},
+{
+    
+    "id": 4,
+    "img":"hg"
+
+},
+{
+    
+    "id": 5,
+    "img":"hg"
+
+},
+{
+    
+    "id": 6,
+    "img":"hg"
+
+},
+{
+    
+    "id": 7,
+    "img":"hg"
+
+},
+{
+    
+    "id": 8,
+    "img":"hg"
+
+},
+{
+    
+    "id": 9,
+    "img":"hg"
+
+},
+{
+    
+    "id": 10,
+    "img":"hg"
+
+}
+
+]
+
+
+{
+    "data": {
+      "products": [
+        {
+          "id": "cjw39tje500000000001",
+          "name": "Product A",
+          "description": "This is product A.",
+          "image": "https://example.com/product-a.jpg",
+          "suppliers": [
+            {
+              "id": "cjw39tjf300000000001",
+              "price": "10.00",
+              "stock": "50",
+              "distance": "10km",
+              "product": {
+                "connect": {
+                  "id": "cjw39tje500000000001"
+                }
+              },
+              "supplier": {
+                "connect": {
+                  "id": "cjw39tjf300000000001"
+                }
+              }
+            },
+            {
+              "id": "cjw39tjfs00000000001",
+              "price": "12.00",
+              "stock": "20",
+              "distance": "5km",
+              "product": {
+                "connect": {
+                  "id": "cjw39tje500000000001"
+                }
+              },
+              "supplier": {
+                "connect": {
+                  "id": "cjw39tjf400000000001"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "cjw39tje500000000002",
+          "name": "Product B",
+          "description": "This is product B.",
+          "image": "https://example.com/product-b.jpg",
+          "suppliers": [
+            {
+              "id": "cjw39tjfx00000000001",
+              "price": "15.00",
+              "stock": "30",
+              "distance": "8km",
+              "product": {
+                "connect": {
+                  "id": "cjw39tje500000000002"
+                }
+              },
+              "supplier": {
+                "connect": {
+                  "id": "cjw39tjf500000000001"
+                }
+              }
+            },
+            {
+              "id": "cjw39tjfy00000000001",
+              "price": "18.00",
+              "stock": "10",
+              "distance": "15km",
+              "product": {
+                "connect": {
+                  "id": "cjw39tje500000000002"
+                }
+              },
+              "supplier": {
+                "connect": {
+                  "id": "cjw39tjf600000000001"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "suppliers": [
+        {
+          "id": "cjw39tjf300000000001",
+          "name": "Supplier A",
+          "price": "10.00",
+          "stock": "50",
+          "distance": "10km",
+          "products": [
+            {
+              "connect": {
+                "id": "cjw39tje500000000001"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cjw39tjf400000000001",
+          "name": "Supplier B",
+          "price": "12.00",
+          "stock": "20",
+          "distance": "5km",
+          "products": [
+            {
+              "connect": {
+                "id": "cjw39tje500000000001"
+              }
+            }
+          ]
+        },
+        {
+          "id": "cjw39tjf500000000001",
+          "name": "Supplier C",
+          "price": "15.00",
+          "stock":"30",
+  "distance": "8km",
+  "products": [
+  {
+  "connect": {
+  "id": "cjw39tje500000000002"
+  }
+  }
+  ]
+  },
+  {
+  "id": "cjw39tjf600000000001",
+  "name": "Supplier D",
+  "price": "18.00",
+  "stock": "10",
+  "distance": "15km",
+  "products": [
+  {
+  "connect": {
+  "id": "cjw39tje500000000002"
+  }
+  }
+  ]
+  }
+  ],
+  "productSuppliers": [
+  {
+  "id": "cjw39tjfy00000000001",
+  "price": "18.00",
+  "stock": "10",
+  "distance": "15km",
+  "productId": "cjw39tje500000000002",
+  "supplierId": "cjw39tjf600000000001"
+  },
+  {
+  "id": "cjw39tjfx00000000001",
+  "price": "15.00",
+  "stock": "30",
+  "distance": "8km",
+  "productId": "cjw39tje500000000002",
+  "supplierId": "cjw39tjf500000000001"
+  },
+  {
+  "id": "cjw39tjfs00000000001",
+  "price": "12.00",
+  "stock": "20",
+  "distance": "5km",
+  "productId": "cjw39tje500000000001",
+  "supplierId": "cjw39tjf400000000001"
+  },
+  {
+  "id": "cjw39tjf300000000001",
+  "price": "10.00",
+  "stock": "50",
+  "distance": "10km",
+  "productId": "cjw39tje500000000001",
+  "supplierId": "cjw39tjf300000000001"
+  }
+  ]
+  }
+  }

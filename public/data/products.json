@@ -1,0 +1,132 @@
+{
+    "data": {
+        "Product": [
+            {
+                "id": "p1",
+                "name": "Aspirin",
+                "description": "A common pain reliever and fever reducer.",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2I9hsPtZ8DXTJUNU3WPpdqCIp2Nev9kaNLA&usqp=CAU",
+                "suppliers": [
+                    {
+                        "id": "ps1",
+                        "price": "10.99",
+                        "stock": "100",
+                        "distance": "5 miles",
+                        "supplierId": "s1"
+                    },
+                    {
+                        "id": "ps2",
+                        "price": "12.99",
+                        "stock": "50",
+                        "distance": "10 miles",
+                        "supplierId": "s2"
+                    }
+                ]
+            },
+            {
+                "id": "p2",
+                "name": "Amoxycillin",
+                "description": "A medication used to treat bacterial infections.",
+                "image": "https://5.imimg.com/data5/SELLER/Default/2022/10/UB/MU/AF/28890488/amoxicillin-500-mg-almox-capsule-500x500.jpg",
+                "suppliers": [
+                    {
+                        "id": "ps3",
+                        "price": "8.99",
+                        "stock": "200",
+                        "distance": "3 miles",
+                        "supplierId": "s1"
+                    },
+                    {
+                        "id": "ps4",
+                        "price": "11.99",
+                        "stock": "75",
+                        "distance": "8 miles",
+                        "supplierId": "s3"
+                    }
+                ]
+            }
+        ],
+        "Supplier": [
+            {
+                "id": "s1",
+                "name": "MediPLex",
+                "price": "10.99",
+                "stock": "100",
+                "image": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/fzmxo1t3dwwpdju0wope",
+                "distance": "5 miles",
+                "products": [
+                    {
+                        "productId": "p1",
+                        "supplierId": "s1"
+                    },
+                    {
+                        "productId": "p2",
+                        "supplierId": "s1"
+                    }
+                ]
+            },
+            {
+                "id": "s2",
+                "name": "MedEasy",
+                "price": "12.99",
+                "stock": "50",
+                "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvYh6IzLCUT5WQBRq0Nc-CAzuM88MOvVeBELYvudsaS4_r4sda3t4kT74h8Z-IwwduYR4&usqp=CAU",
+                "distance": "10 miles",
+                "products": [
+                    {
+                        "productId": "p1",
+                        "supplierId": "s2"
+                    }
+                ]
+            },
+            {
+                "id": "s3",
+                "name": "NetMed",
+                "price": "11.99",
+                "stock": "75",
+                "image": "https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2020/08/11134215/media-handler.jpg",
+                "distance": "8 miles",
+                "products": [
+                    {
+                        "productId": "p2",
+                        "supplierId": "s3"
+                    }
+                ]
+            }
+        ],
+        "ProductSupplier": [
+            {
+                "id": "ps1",
+                "price": "10.99",
+                "stock": "100",
+                "distance": "5 miles",
+                "productId": "p1",
+                "supplierId": "s1"
+            },
+            {
+                "id": "ps2",
+                "price": "12.99",
+                "stock": "50",
+                "distance": "10 miles",
+                "productId": "p1",
+                "supplierId": "s2"
+            },
+            {
+                "id": "ps3",
+                "price": "8.99",
+                "stock": "200",
+                "distance": "3 miles",
+                "productId": "p2",
+                "supplierId": "s1"
+            },
+            {
+                "id": "ps4",
+                "price": "11.99",
+                "stock": "75",
+                "distance": "8 miles",
+                "productId": "p2",
+                "supplierId": "s3"
+            }
+        ]
+    }
+}

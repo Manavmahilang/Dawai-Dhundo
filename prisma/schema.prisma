@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
   relationMode = "prisma"
 }
@@ -41,35 +41,41 @@ model User {
   name          String?
   email         String?   @unique
   emailVerified DateTime?
-  apiKey   ApiKey[]
-  apiKeyId String?
   image    String?
   accounts Account[]
   sessions Session[]
 }
 
-model ApiKey {
-  id      String  @id @default(cuid())
-  key     String  @unique
-  enabled Boolean @default(true)
-  User    User    @relation(fields: [userId], references: [id])
-  userId  String
-  requests ApiRequest[]
-  @@unique([userId, key, enabled])
+model Product {
+  id          String        @id @default(cuid())
+  name        String?
+  description String?
+  image       String?
+  suppliers   ProductSupplier[]
 }
 
-model ApiRequest {
-  id        String   @id @default(cuid())
-  timestamp DateTime @default(now())
-  method    String
-  path      String
-  status    Int
-  duration  Int
-  usedApiKey String
-  ApiKey   ApiKey @relation(fields: [apiKeyId], references: [id])
-  apiKeyId String
-  @@index([apiKeyId, timestamp])
+model Supplier {
+  id          String        @id @default(cuid())
+  name        String?
+  price       String
+  stock       String
+  image       String
+  distance    String
+  products    ProductSupplier[]
 }
+
+model ProductSupplier {
+  id          String  @id @default(cuid())
+  price       String
+  stock       String
+  distance    String
+  product     Product @relation(fields: [productId], references: [id])
+  supplier    Supplier @relation(fields: [supplierId], references: [id])
+  productId   String
+  supplierId  String
+}
+
+
 
 model VerificationToken {
   identifier String

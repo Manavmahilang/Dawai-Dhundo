@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react';
-import React from 'react';
 import Link from 'next/link';
 
 interface Props {
@@ -28,7 +27,7 @@ const SearchBar: React.FC<Props> = ({ placeholder = 'Search...' }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="relative text-gray-600 focus-within:text-gray-400">
+      <div className="relative text-gray-600 focus-within:text-gray-400 flex-grow">
         <span className="absolute inset-y-0 left-0 flex items-center pl-2">
           <button type="submit" className="p-1 focus:outline-none focus:shadow-outline">
             <svg
@@ -49,8 +48,9 @@ const SearchBar: React.FC<Props> = ({ placeholder = 'Search...' }) => {
           type="text"
           value={query}
           onChange={handleChange}
-          className="py-2 pl-10 text-sm text-gray-900 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-gray-400 hover:border-gray-400"
+          className="py-2 pl-10 pr-4 text-sm text-gray-900 bg-white rounded-md border border-gray-300 focus:outline-none focus:border-gray-400 hover:border-gray-400 w-full"
           placeholder={placeholder}
+          style={{ width: '100%' }}
         />
       </div>
     </form>
