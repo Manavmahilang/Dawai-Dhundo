@@ -44,6 +44,50 @@
                         "supplierId": "s3"
                     }
                 ]
+            },
+            {
+                "id": "p3",
+                "name": "Tulsi Plus Expectorant",
+                "description": "Provide Instant Relief from Cough and Cold Naturally",
+                "image": "https://m.media-amazon.com/images/I/81kc-SivMdL._SL1500_.jpg",
+                "suppliers": [
+                    {
+                        "id": "ps3",
+                        "price": " 90.00",
+                        "stock": "200",
+                        "distance": "3 miles",
+                        "supplierId": "s1"
+                    },
+                    {
+                        "id": "ps4",
+                        "price": "98.00",
+                        "stock": "75",
+                        "distance": "8 miles",
+                        "supplierId": "s3"
+                    }
+                ]
+            },
+            {
+                "id": "p4",
+                "name": "Dabur Chyawanprash",
+                "description": "950gm, 2X/3X Immunity, helps build Strength and for Stamina",
+                "image": "https://m.media-amazon.com/images/I/71tH6y4K-SL._SX679_.jpg",
+                "suppliers": [
+                    {
+                        "id": "ps3",
+                        "price": " 170.00",
+                        "stock": "200",
+                        "distance": "3 miles",
+                        "supplierId": "s1"
+                    },
+                    {
+                        "id": "ps4",
+                        "price": " 138.00",
+                        "stock": "75",
+                        "distance": "8 miles",
+                        "supplierId": "s3"
+                    }
+                ]
             }
         ],
         "Supplier": [
@@ -115,7 +159,7 @@
                 "id": "ps3",
                 "price": "8.99",
                 "stock": "200",
-                "distance": "3 miles",
+                "distance": "5 miles",
                 "productId": "p2",
                 "supplierId": "s1"
             },

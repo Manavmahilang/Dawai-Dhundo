@@ -2,11 +2,7 @@
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Home from '@/app/page';
-import Slideshow from './SlideShow';
-import HealthConcern from './HealthConcern';
-import TopBrands from './TopBrands';
 import Link from 'next/link';
-import { json } from 'stream/consumers';
 
 interface Product {
   id: string;
@@ -15,6 +11,7 @@ interface Product {
   image: string;
   suppliers: {
     id: string;
+    image :string;
     price: string;
     stock: string;
     distance: string;
@@ -36,40 +33,35 @@ interface Supplier {
 }
 
 const Homecontent = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [supplier, setProducts] = useState<Supplier[]>([]);
 
   useEffect(() => {
-    fetch('/data/products.json')
+    fetch('/data/supplier.json')
       .then(response => response.json())
-      .then(data => setProducts(data.data.Product))
+      .then(data => setProducts(data.data.Supplier))
       .catch(error => console.error(error));
   }, []);
-  console.log('data', products)
+  console.log('data', supplier)
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <Slideshow />
-        <HealthConcern />
-        <TopBrands />
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">All Products</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Our Partners</h2>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          {products.map(product => (
-            <div key={product.id} className="group relative border rounded-md overflow-hidden w-full h-full">
+          {supplier.map(supplier => (
+            <div key={supplier.id} className="group relative border rounded-md overflow-hidden w-full h-full">
               <div className="aspect-h-1 aspect-w-1 bg-gray-200 group-hover:opacity-75">
-                <img src={product.image} alt={product.name} className="h-full w-full object-cover object-center rounded-md" style={{ objectFit: 'cover' }} />
+                <img src={supplier.image}alt={supplier.name} className="h-full w-full object-cover object-center rounded-md" style={{ objectFit: 'cover' }} />
               </div>
               <div className="p-4 flex justify-between h-28 ">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                  <Link href={{pathname:`/Productdetails/${product.id}`,query: {id: JSON.stringify(product.id)} }}>
+                  <Link href={`/Productdetails/${supplier.id}`}>
                       <span aria-hidden="true" className="absolute inset-0"></span>
-                      {product.name}
+                      <h3>{supplier.name}</h3>
                     </Link>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.description}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-700">Rs{product.suppliers[0].price}</p>
               </div>
             </div>
           ))}

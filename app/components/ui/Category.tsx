@@ -10,33 +10,33 @@ interface Product {
 const products: Product[] = [
   {
     id: 1,
-    name: 'Petcare',
-    image: 'https://images.pexels.com/photos/13643632/pexels-photo-13643632.jpeg?auto=compress&cs=tinysrgb&w=600',
-    discount: 10,
+    name: 'General Drugs',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQICMqpJgR263Wf6RPuDsNmpStJ7n3WBqc5sw&usqp=CAU',
+    discount: 25,
   },
   {
     id: 2,
-    name: 'BodyCare',
-    image: 'https://images.pexels.com/photos/13643632/pexels-photo-13643632.jpeg?auto=compress&cs=tinysrgb&w=600',
+    name: 'Orthopedics',
+    image: 'https://www.kaochen.com/proimages/product/01_Cervical_Collars/MPE01045-47-202207.jpg',
     discount: 20,
   },
   {
     id: 3,
-    name: 'orthopedics',
-    image: 'https://images.pexels.com/photos/13643632/pexels-photo-13643632.jpeg?auto=compress&cs=tinysrgb&w=600',
+    name: 'Vitamines',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE3HppP3OxNiid5-nLt9rnFbL8kr_5BWS6Lw&usqp=CAU',
     discount: 30,
   },
   {
     id: 4,
     name: 'Supplements',
-    image: 'https://images.pexels.com/photos/13643632/pexels-photo-13643632.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: 'https://justinsportsmedicineteam.com/wp-content/uploads/2015/08/supplements-pic-trans.png',
     discount: 40,
   },
   {
     id: 5,
-    name: 'Skincare',
-    image: 'https://images.pexels.com/photos/13643632/pexels-photo-13643632.jpeg?auto=compress&cs=tinysrgb&w=600',
-    discount: 50,
+    name: 'Personal Care',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT15Xf_xAlAhlBXZYDwCtSMMxTEKTtNiynS0Q&usqp=CAU',
+    discount: 20,
   },
 ];
 
